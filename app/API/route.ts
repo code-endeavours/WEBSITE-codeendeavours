@@ -1,15 +1,13 @@
 import { NextResponse } from "next/server";
 
+// services/instagramService.ts
 const INSTAGRAM_API_URL = "https://graph.instagram.com/me";
 
-export async function GET() {
+export async function getInstagramProfileData() {
   const accessToken = process.env.INSTAGRAM_ACCESS_TOKEN;
 
   if (!accessToken) {
-    return NextResponse.json(
-      { error: "Instagram access token not found" },
-      { status: 500 }
-    );
+    return { error: "Instagram access token not found" }; // Return the error directly
   }
 
   try {
@@ -22,18 +20,16 @@ export async function GET() {
       ),
     ]);
 
+    if (!profileResponse.ok || !mediaResponse.ok) {
+      throw new Error("Failed to fetch Instagram data");
+    }
+
     const profileData = await profileResponse.json();
     const mediaData = await mediaResponse.json();
 
-    return NextResponse.json({
-      profile: profileData,
-      media: mediaData.data,
-    });
+    return { profile: profileData, media: mediaData.data }; // Return the data directly
   } catch (error) {
     console.error("Error fetching Instagram data:", error);
-    return NextResponse.json(
-      { error: "Failed to fetch Instagram data" },
-      { status: 500 }
-    );
+    return { error: "Failed to fetch Instagram data" }; // Return error if something goes wrong
   }
 }

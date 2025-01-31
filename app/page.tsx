@@ -45,7 +45,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Read our docs
+            Read Here
           </a>
         </div>
       </main>
@@ -63,7 +63,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Learn
+          Learn Next.js
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
@@ -78,7 +78,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Examples
+          Examples of websited
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
@@ -93,7 +93,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Go to nextjs.org →
+          Go to official website
         </a>
       </footer>
     </div>

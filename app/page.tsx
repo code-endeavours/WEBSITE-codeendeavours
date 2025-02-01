@@ -1,6 +1,6 @@
 import { getInstagramProfileData } from "./API/route";
 import { Button } from "@/components/ui/button";
-import { Facebook, Instagram, Mail, MapPin } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
 import Image from "next/image";
 
 export default async function Page() {

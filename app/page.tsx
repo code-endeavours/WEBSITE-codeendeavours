@@ -52,7 +52,7 @@ export default async function Page() {
           </div>
         </div>
       </header>
-
+      {/* Main content */}
       <main>
         <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
           {profile.username ? (
@@ -84,6 +84,11 @@ export default async function Page() {
           )}
         </div>
       </main>
+      {/* Footer */}
+      <footer className="bg-gray-100 py-6 px-4 sm:px-6 lg:px-8 text-sm text-gray-600 font-bold flex justify-center items-center">
+        &copy; {new Date().getFullYear()} {profile.username}. All rights
+        reserved.
+      </footer>
     </div>
   );
 }

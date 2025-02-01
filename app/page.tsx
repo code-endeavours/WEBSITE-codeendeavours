@@ -66,8 +66,8 @@ export default async function Page() {
                       className="aspect-square bg-gray-200 rounded-lg overflow-hidden"
                     >
                       <Image
-                        src={post.media_url || "/placeholder.svg"}
-                        alt={post.caption || "Instagram post"}
+                        src={post.media_url}
+                        alt={post.caption}
                         width={300}
                         height={300}
                         className="w-full h-full object-cover"

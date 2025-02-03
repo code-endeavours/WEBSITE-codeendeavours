@@ -37,18 +37,17 @@ export default async function Page() {
               rel="noopener noreferrer"
             >
               <Button variant="outline">
-                <Facebook className="h-4 w-4" /> Follow
+                <Instagram className="h-4 w-4" />
               </Button>
             </a>
+            <Button variant="outline">
+              <Facebook className="h-4 w-4" />
+            </Button>
             <a
               href="https://www.instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-            >
-              <Button variant="outline">
-                <Instagram className="h-4 w-4" /> Follow
-              </Button>
-            </a>
+            ></a>
           </div>
         </div>
       </header>

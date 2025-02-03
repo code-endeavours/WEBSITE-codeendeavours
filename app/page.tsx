@@ -32,7 +32,7 @@ export default async function Page() {
           {/* Buttons on the right side */}
           <div className="flex space-x-1">
             <a
-              href="https://www.facebook.com"
+              href="https://www.instagram.com"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -40,14 +40,15 @@ export default async function Page() {
                 <Instagram className="h-4 w-4" />
               </Button>
             </a>
-            <Button variant="outline">
-              <Facebook className="h-4 w-4" />
-            </Button>
             <a
-              href="https://www.instagram.com"
+              href="https://www.facebook.com"
               target="_blank"
               rel="noopener noreferrer"
-            ></a>
+            >
+              <Button variant="outline">
+                <Facebook className="h-4 w-4" />
+              </Button>
+            </a>
           </div>
         </div>
       </header>
